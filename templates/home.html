@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+	
+</head>
+
+<body>
+	
+<div class='center_form'>
+	<h2>Registration Form</h2>
+	<form method='post'>
+		{{ form.hidden_tag() }}
+		  <div class="form-row">
+		    <div class="form-group col-md-4">
+		      {{form.first_name.label}}
+		      {{form.first_name}}
+		    </div>
+		    <div class="form-group col-md-4">
+		      {{form.last_name.label}}
+		      {{form.last_name}}
+		    </div>	
+		  </div>
+
+		  <div class="form-row">
+		    <div class="form-group col-md-4">
+		      {{form.birthday.label}}
+		      {{form.birthday}}
+		    </div>
+		   <div class="form-group">
+		      {{form.gender.label(class='gender_list')}}
+		      {{form.gender}}
+		    </div>	
+		  </div>
+
+		  <div class="form-row">
+		    <div class="form-group col-md-4">
+		      {{form.email.label}}
+		      {{form.email}}
+		    </div>
+		    <div class="form-group col-md-4">
+		      {{form.phone_number.label}}
+		      {{form.phone_number}}
+		    </div>	
+		  </div>
+
+		  <div class="form-group">
+   			{{form.subject.label}}
+		    {{form.subject}}
+ 		 </div>
+
+
+ 		 <div class='form-group'>
+			{{ form.submit(class='btn btn-outline-info') }}
+		</div>
+	</form>
+</div>
+
+<!--
+<form>
+	{{form.hidden_tag()}}
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="formGroupFirstNameInput">{{form.first_name.label}}</label>
+      {{form.first_name}}
+    </div>
+    <div class="form-group col-md-2">
+      <label for="formGroupSecondNameInput">{{form.last_name.label}}</label>
+      {{form.last_name}}
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="formGroupFirstNameInput">{{form.birthday.label}}</label>
+      {{form.birthday}}
+    </div>
+    <div class="form-group col-md-2">
+      <label for="genderInput">{{form.gender.label}}</label>
+      {{form.gender (class='disp')}}
+    </div>
+   </div>
+  
+  <button type="submit" class="btn btn-primary">Sign in</button>-->
+</form>
+</body>
+</html>

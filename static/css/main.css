@@ -1,0 +1,41 @@
+
+div.center_form{
+    display: block;
+    
+}
+
+/*.disp{
+	display: inline-block;
+	list-style-type: none;
+}*/
+
+.gender_list{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+.center_form
+{
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 50%;
+}
+
+/*
+.center_form{
+    background-color: #C5C9B8;
+    width: 100%;
+    color: #333333;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+    display: inline-block;
+    float: none;
+}
+*/
+
