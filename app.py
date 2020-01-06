@@ -8,6 +8,7 @@ from wtforms.validators import DataRequired, Email
 app=Flask(__name__)
 
 app.config['SECRET_KEY']='secretkeyyy'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 class RegistrationForm(FlaskForm):
 	first_name=StringField('First Name', validators=[DataRequired()])
@@ -41,6 +42,13 @@ def home():
 def show():
 	return render_template('show.html')
 
+@app.after_request
+def after_request(response):
+	response.headers["Cache-Control"] = "no-cache,no-store, must-revalidate, public, max-age=0"
+	response.headers["Expires"] = '0'
+	response.headers["Pragma"] = "no-cache"
+	return response
 
 if __name__=='__main__':
 	app.run(debug=True)
+	
