@@ -9,10 +9,19 @@ div.center_form{
 	list-style-type: none;
 }*/
 
-.gender_list{
+#gender{
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
+	justify-content: space-between;
+}
+
+#gender li {
+	margin-left: 10px;
+}
+
+#gender li {
+	align-selfg
 }
 .center_form
 {
